@@ -1,0 +1,12 @@
+{
+  "name": "david-s-website",
+  "version": "1.0.0",
+  "description": "David's Contracting website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
