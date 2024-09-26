@@ -4,12 +4,18 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-image: url("/Main/img/davidlogopfp.png"); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
 }
 
 /* Header Styles */
 header {
-    background-color: #f2f2f2;
-    padding: 20px 0;
+    background-color: #333;
+    padding: 10px ;
+    border-radius: 5px;
 }
 
 .container {
@@ -21,7 +27,7 @@ header {
 }
 
 .logo {
-    height: 60px;
+    height: 80px;
 }
 
 .nav-links {
@@ -34,7 +40,7 @@ header {
 
 .nav-links li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-size: 18px;
 }
 
@@ -47,6 +53,7 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
+    border-radius: 5px;
 }
 
 .footer-links {
@@ -70,4 +77,38 @@ footer {
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+    padding: 2px;
+}
+
+/* privacy policy */
+section.tos {
+    background-color: #999999b6;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+/* tos */
+section.privacy-policy {
+    background-color: #999999b6;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+hr{
+    border: none; 
+    height: 2px; 
+    background-color: #333;
+}
+
+
+.format{
+    padding: 5px;
 }
