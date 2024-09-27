@@ -1,29 +1,34 @@
-// Highlight active navigation link based on scroll position
-window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('.nav-links li a');
+// Scroll to specific section when button is clicked
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+}
 
-  let currentSection = '';
+// Gallery Slider Functionality
+let currentSlide = 0;
 
-  sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 60) {
-          currentSection = section.getAttribute('id');
-      }
-  });
+function changeSlide(direction) {
+    const slides = document.querySelectorAll('.slide');
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    updateSlides(slides);
+}
 
-  navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').includes(currentSection)) {
-          link.classList.add('active');
-      }
-  });
-});
+function updateSlides(slides) {
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+    });
+}
 
-// Optional: Scroll back to top functionality
-document.querySelector('.logo').addEventListener('click', () => {
-  window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-  });
+// Form submission handling
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    alert(`Thank you, ${name}! Your message has been received. We'll get back to you at ${email} shortly.`);
+    
+    // Reset the form after submission
+    document.getElementById('contact-form').reset();
 });
