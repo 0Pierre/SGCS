@@ -1,124 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contractor Website</title>
-    <link rel="stylesheet" href="./style/style.css">
-    <script defer src="./script/script.js"></script>
-    <script src="https://kit.fontawesome.com/96b7db83f3.js" crossorigin="anonymous"></script>
-  </head>
 
-  <body>
-    <header>
-        <div class="container">
-            <h1>Top Quality Drywall Services</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South General Services INC</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <script defer src="./script/script.js"></script>
+  <script src="https://kit.fontawesome.com/96b7db83f3.js" crossorigin="anonymous"></script>
+</head>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Your Trusted Drywall Contractor</h2>
-            <p>We provide professional drywall installation, repair, and finishing services for residential and commercial projects.</p>
-            <button onclick="scrollToSection('contact')">Get a Quote</button>
-        </div>
-    </section>
+<body>
+  <header>
+    <div class="container">
+      <h1>South General Contracting Services INC</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>With over 10 years of experience, we deliver high-quality drywall solutions tailored to your specific needs.</p>
-        </div>
-    </section>
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Your Trusted Drywall Contractor</h2>
+      <p>We provide professional drywall installation, repair, and finishing services for residential and commercial
+        projects.</p>
+      <button onclick="scrollToSection('contact')">Get a Quote</button>
+    </div>
+  </section>
 
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-card">
-                <h3>Drywall Installation</h3>
-                <p>We provide expert drywall installation for new constructions and renovations.</p>
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>With over 10 years of experience, we deliver high-quality drywall solutions tailored to your specific needs.
+      </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-card">
+        <h3>Drywall Installation</h3>
+        <p>We provide expert drywall installation for new constructions and renovations.</p>
+      </div>
+      <div class="service-card">
+        <h3>Drywall Repair</h3>
+        <p>Got holes or cracks in your drywall? Our repair services will make it look brand new.</p>
+      </div>
+      <div class="service-card">
+        <h3>Finishing & Texturing</h3>
+        <p>We offer professional finishing and texturing to give your walls a polished look.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h1 style="">Our Work</h1>
+      <div class="slider-wrapper">
+        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+        <div class="slider">
+          <div class="slides">
+            <!-- Add images or videos here -->
+            <div class="slide">
+              <img src="./img/IMG_0402.jpg" alt="Project 1">
             </div>
-            <div class="service-card">
-                <h3>Drywall Repair</h3>
-                <p>Got holes or cracks in your drywall? Our repair services will make it look brand new.</p>
+            <div class="slide">
+              <img src="./img/IMG_0403.jpg" alt="Project 2">
             </div>
-            <div class="service-card">
-                <h3>Finishing & Texturing</h3>
-                <p>We offer professional finishing and texturing to give your walls a polished look.</p>
+            <div class="slide">
+              <img src="./img/IMG_0404.jpg" alt="Project 3">
             </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <div class="container">
-            <h2>Our Work</h2>
-            <div class="slider">
-                <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
-                <div class="slides">
-                    <!-- Add images or videos here -->
-                    <div class="slide">
-                        <img src="./img/IMG_0402.jpg" alt="Project 1">
-                    </div>
-                    <div class="slide">
-                        <img src="./img/IMG_0403.jpg" alt="Project 2">
-                    </div>
-                    <div class="slide">
-                        <img src="./img/IMG_0404.jpg" alt="Project 2">
-                    </div>
-                    <div class="slide">
-                        <img src="./img/IMG_0405.jpg" alt="Project 2">
-                    </div>
-                    <div class="slide">
-                        <img src="./img/IMG_1092.jpg" alt="Project 2">
-                    </div>
-                    <div class="slide">
-                        <img src="./img/IMG_8929.jpg" alt="Project 2">
-                    </div>
-                    <div class="slide">
-                        <img src="./img/IMG_8962.jpg" alt="Project 2">
-                    </div>
-                    <div class="slide">
-                        <video controls width="800">
-                            <source src="./assets/copy_B4D27BAE-812B-4083-B972-20EFFCF16CA9.mov" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-                <span class="next" onclick="changeSlide(1)">&#10095;</span>
+            <div class="slide">
+              <img src="./img/IMG_0405.jpg" alt="Project 4">
             </div>
+            <div class="slide">
+              <img src="./img/IMG_1092.jpg" alt="Project 5">
+            </div>
+            <div class="slide">
+              <img src="./img/IMG_8929.jpg" alt="Project 6">
+            </div>
+            <div class="slide">
+              <img src="./img/IMG_8962.jpg" alt="Project 7">
+            </div>
+            <div class="slide">
+              <video controls width="800" height="400">
+                <source src="./assets/copy_18BFEEF8-6C03-48B0-A3B6-189FF872C440.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
         </div>
-    </section>
+        <span class="next" onclick="changeSlide(1)">&#10095;</span>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Drywall Contractor. All rights reserved.</p>
-        </div>
-    </footer>
-  </body>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Drywall Contractor. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
 
 </html>

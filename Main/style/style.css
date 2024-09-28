@@ -5,36 +5,63 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-/* Header Styles */
+/* Header Styling */
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background: #555454; /* Dark background for contrast */
+    color: white; /* Text color */
+    padding: 20px 0; /* Add padding around the header for more space */
 }
 
-header h1 {
-    margin: 0;
+/* Container inside the header */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+/* Navigation Styles */
+nav ul {
+    display: flex; /* Horizontally align items */
+    gap: 10px; /* Space between each list item */
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    margin-right: -100px;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
+nav ul li a {
+    color: white;
     text-decoration: none;
+    padding: 10px 20px; /* Add padding inside each link */
+    transition: background 0.3s ease; /* Smooth background color change */
 }
+
+/* On hover, change background color */
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px; /* Add rounded corners to links */
+}
+
+/* Increase Spacing between Header Title and Navigation */
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 25px; /* Increase font size for emphasis */
+    line-height: 1.2; /* Control line spacing */
+    margin-left: -60px;
+    color: rgb(253, 139, 0);
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Padding on the sides */
+}
+
 
 /* Hero Section */
 .hero {
-    background: url('https://images.unsplash.com/photo-1533038590840-1cde6e668a91');
+    background: url('/Main/img/david_logotrans.png');
     background-size: cover;
     color: #fff;
     text-align: center;
@@ -55,11 +82,11 @@ section {
 .slider {
     position: relative;
     max-width: 800px;
+    height: 400px;  /* Fixed height for the canvas */
     margin: 0 auto;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);  /* Drop Shadow */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);  /* Drop shadow */
     overflow: hidden;  /* Prevent canvas overflow */
     border-radius: 10px;  /* Optional: Rounded corners */
-    height: 400px;  /* Fixed height for the canvas */
 }
 
 .slides {
@@ -70,15 +97,24 @@ section {
 .slide {
     min-width: 100%;
     height: 400px;  /* Fixed height to match the slider */
+    display: flex;  /* Use flexbox to center content */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
 }
 
-.slide img,
-.slide video {
+.slide img {
     width: 100%;
     height: 100%;  /* Prevent resizing */
     object-fit: cover;  /* Maintain aspect ratio */
 }
 
+.slide video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;  /* Maintain video aspect ratio */
+}
+
+/* Arrow Styles */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -140,53 +176,95 @@ footer {
 
 
 
-/* Add these styles for the slider */
+
+
+
+/* Gallery Slider Styles */
 .slider {
     position: relative;
     max-width: 800px;
+    height: 400px;  /* Fixed height for the canvas */
     margin: 0 auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);  /* Drop shadow */
+    overflow: hidden;  /* Prevent canvas overflow */
+    border-radius: 10px;  /* Optional: Rounded corners */
+}
+
+/* Adjust the container to wrap the slider and arrows */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slides {
     display: flex;
-    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
     min-width: 100%;
-    transition: transform 0.5s ease-in-out;
+    height: 400px;  /* Fixed height to match the slider */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.slide img,
-.slide video {
+.slide img {
     width: 100%;
+    height: 100%;  /* Prevent resizing */
+    object-fit: cover;  /* Maintain aspect ratio */
 }
 
+.slide video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;  /* Maintain video aspect ratio */
+}
+
+/* Arrow Styles */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
+    transform: translateY(-50%);
+    width: 40px;  /* Set a fixed width */
+    height: 40px; /* Set a fixed height to match width */
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 50%;  /* Make it a perfect circle */
     user-select: none;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;  /* Ensure it stays above other elements */
+    display: flex;  /* Center arrow inside */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
 }
 
 .prev {
-    left: 0;
+    left: -60px;  /* Adjust position to be outside container */
 }
 
 .next {
-    right: 0;
+    right: -60px;  /* Adjust position to be outside container */
 }
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+
+/* Optional: Container spacing */
+.slider-wrapper {
+    margin: 20px 0;  /* Add space around the entire slider container */
+}
+
+
+
+
 
 /* CSS */
 button {
