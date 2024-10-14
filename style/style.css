@@ -3,6 +3,10 @@
 .            GLOBAL STYLING  
 
 ****************************************/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
 body{
     margin: 0;
 }
@@ -16,6 +20,7 @@ html {
 
 
 
+
 /***************************************
 
 .             NAV STYLING  
@@ -24,11 +29,11 @@ html {
 /* Header Styling */
 header {
     background: #817f7f;
-    /* Dark background for contrast */
     color: white;
-    /* Text color */
     padding: 20px 0;
-    /* Add padding around the header for more space */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Container inside the header */
@@ -39,25 +44,19 @@ header .container {
 }
 nav ul {
     display: flex;
-    /* Horizontally align items */
     gap: 50px;
-    /* Space between each list item */
     list-style: none;
-    /* Remove bullet points */
     margin: 0;
-    /* Remove default margin */
     padding: 0;
-    /* Remove default padding */
     margin-right: -300px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
     padding: 10px 20px;
-    /* Add padding inside each link */
     transition: background 0.3s ease;
-    /* Smooth background color change */
 }
 
 /* On hover, change background color */
@@ -68,16 +67,13 @@ nav ul li a:hover {
 }
 
 /* Increase Spacing between Header Title and Navigation */
-h1 {
+header h1 {
     margin: 0;
-    /* Remove default margin */
-    font-size: 25px;
-    /* Increase font size for emphasis */
+    font-size: 30px;
     line-height: 1.2;
-    /* Control line spacing */
     margin-left: -300px;
-    color: rgb(253, 139, 0);
-
+    color: rgb(245, 139, 0);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
     padding: 1%;
 }
 
@@ -268,7 +264,7 @@ section {
 .contact-form p:before {
     content: attr(type);
     display: block;
-    margin: 28px 0 0;
+    margin: 22px 20px 0;
     font-size: 16px;
     color: #5a5a5a
 }
@@ -318,10 +314,14 @@ section {
 
 ****************************************/
 footer {
-    background: #333;
+    background: #817f7f;
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -438,7 +438,11 @@ footer {
 
 
 
-/* CSS */
+/***************************************
+
+.                 CSS  
+
+****************************************/
 button {
     align-items: center;
     background-color: #FFFFFF;
@@ -477,3 +481,82 @@ button:hover {
     transform: translateY(-1px);
 }
 
+
+
+/***************************************
+
+.                REVIEWS  
+
+****************************************/
+
+
+
+.snip1533 {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #9e9e9e;
+  display: inline-block;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  margin: 35px 10px 10px;
+  max-width: 310px;
+  min-width: 250px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-top: 5px solid #000000;
+}
+
+.snip1533 *,
+.snip1533 *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.snip1533 figcaption {
+  padding: 13% 10% 12%;
+}
+
+.snip1533 figcaption:before {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #000000;
+  content: "\f10e";
+  font-family: 'FontAwesome';
+  font-size: 32px;
+  font-style: normal;
+  left: 50%;
+  line-height: 60px;
+  position: absolute;
+  top: -30px;
+  width: 60px;
+}
+
+.snip1533 h3 {
+  color: #3c3c3c;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 10px 0 5px;
+}
+
+.snip1533 h4 {
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.snip1533 blockquote {
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+
+/* Demo purposes only */
