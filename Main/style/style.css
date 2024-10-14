@@ -1,15 +1,34 @@
-/* Global Styles */
-body, html {
+/***************************************
+
+.            GLOBAL STYLING  
+
+****************************************/
+body{
+    margin: 0;
+}
+
+html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
+
+
+
+/***************************************
+
+.             NAV STYLING  
+
+****************************************/
 /* Header Styling */
 header {
-    background: #555454; /* Dark background for contrast */
-    color: white; /* Text color */
-    padding: 20px 0; /* Add padding around the header for more space */
+    background: #817f7f;
+    /* Dark background for contrast */
+    color: white;
+    /* Text color */
+    padding: 20px 0;
+    /* Add padding around the header for more space */
 }
 
 /* Container inside the header */
@@ -18,54 +37,65 @@ header .container {
     align-items: center;
     justify-content: space-between;
 }
-
-/* Navigation Styles */
 nav ul {
-    display: flex; /* Horizontally align items */
-    gap: 10px; /* Space between each list item */
-    list-style: none; /* Remove bullet points */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    margin-right: -100px;
+    display: flex;
+    /* Horizontally align items */
+    gap: 50px;
+    /* Space between each list item */
+    list-style: none;
+    /* Remove bullet points */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    margin-right: -300px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px; /* Add padding inside each link */
-    transition: background 0.3s ease; /* Smooth background color change */
+    padding: 10px 20px;
+    /* Add padding inside each link */
+    transition: background 0.3s ease;
+    /* Smooth background color change */
 }
 
 /* On hover, change background color */
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px; /* Add rounded corners to links */
+    background: rgba(255, 255, 255, 0.226);
+    border-radius: 10px;
+    /* Add rounded corners to links */
 }
 
 /* Increase Spacing between Header Title and Navigation */
 h1 {
-    margin: 0; /* Remove default margin */
-    font-size: 25px; /* Increase font size for emphasis */
-    line-height: 1.2; /* Control line spacing */
-    margin-left: -60px;
+    margin: 0;
+    /* Remove default margin */
+    font-size: 25px;
+    /* Increase font size for emphasis */
+    line-height: 1.2;
+    /* Control line spacing */
+    margin-left: -300px;
     color: rgb(253, 139, 0);
+
+    padding: 1%;
 }
 
-/* Container Styling */
+
+
+
+/***************************************
+
+.          CONTAINER STYLING  
+
+****************************************/
 .container {
-    max-width: 1200px; /* Limit the maximum width */
-    margin: 0 auto; /* Center the container */
-    padding: 0 15px; /* Padding on the sides */
-}
-
-
-/* Hero Section */
-.hero {
-    background: url('/Main/img/david_logotrans.png');
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
+    max-width: 1200px;
+    /* Limit the maximum width */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 0 15px;
+    /* Padding on the sides */
 }
 
 .container {
@@ -73,20 +103,42 @@ h1 {
     margin: 0 auto;
 }
 
-/* Section Styles */
+
+
+
+/***************************************
+
+.      GLOBAL STYLING FOR SECTIONS  
+
+****************************************/
 section {
-    padding: 50px 0;
+    height: 100vh; /* Full page height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Optional for centering text */
 }
 
-/* Gallery Slider Styles */
+
+
+
+/***************************************
+
+.          GALLEY SLIDER SECTION  
+
+****************************************/
 .slider {
     position: relative;
     max-width: 800px;
-    height: 400px;  /* Fixed height for the canvas */
+    height: 400px;
+    /* Fixed height for the canvas */
     margin: 0 auto;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);  /* Drop shadow */
-    overflow: hidden;  /* Prevent canvas overflow */
-    border-radius: 10px;  /* Optional: Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    /* Drop shadow */
+    overflow: hidden;
+    /* Prevent canvas overflow */
+    border-radius: 10px;
+    /* Optional: Rounded corners */
 }
 
 .slides {
@@ -96,31 +148,47 @@ section {
 
 .slide {
     min-width: 100%;
-    height: 400px;  /* Fixed height to match the slider */
-    display: flex;  /* Use flexbox to center content */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
+    height: 400px;
+    /* Fixed height to match the slider */
+    display: flex;
+    /* Use flexbox to center content */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
 }
 
 .slide img {
     width: 100%;
-    height: 100%;  /* Prevent resizing */
-    object-fit: cover;  /* Maintain aspect ratio */
+    height: 100%;
+    /* Prevent resizing */
+    object-fit: cover;
+    /* Maintain aspect ratio */
 }
 
 .slide video {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;  /* Maintain video aspect ratio */
+    object-fit: contain;
+    /* Maintain video aspect ratio */
 }
 
-/* Arrow Styles */
-.prev, .next {
+
+
+
+
+/***************************************
+
+.             ARROW STYLING  
+
+****************************************/
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
+    padding: 13px;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -140,33 +208,111 @@ section {
     border-radius: 0 3px 3px 0;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Contact Section */
-#contact {
-    background: #f9f9f9;
+
+
+
+
+/***************************************
+
+.            CONTACT FORM  
+
+****************************************/
+.contact-form{
+    width: 340px;
+    height: 440px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative
 }
 
-#contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+.contact-form h2 {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    width: 180px;
+    color: #78788c;
+    border-bottom: 3px solid #78788c
 }
 
-#contact-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-#contact-form input, #contact-form textarea {
+.contact-form input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid #bebed2
 }
 
-/* Footer */
+.contact-form input:focus {
+    border-bottom: 2px solid #78788c
+}
+
+.contact-form p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 16px;
+    color: #5a5a5a
+}
+
+.contact-form button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all .3s
+}
+
+.contact-form button:hover {
+    background: #78788c;
+    color: #fff
+}
+
+.contact-form div {
+    content: 'Hi';
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: #50505a;
+    color: #fff;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000
+}
+
+.contact-form span {
+    margin: 0 5px 0 15px
+}
+
+
+
+
+
+/***************************************
+
+.             FOOTER SECTION  
+
+****************************************/
 footer {
     background: #333;
     color: #fff;
@@ -179,15 +325,23 @@ footer {
 
 
 
-/* Gallery Slider Styles */
+/***************************************
+
+.             SLIDER SECTION  
+
+****************************************/
 .slider {
     position: relative;
     max-width: 800px;
-    height: 400px;  /* Fixed height for the canvas */
+    height: 400px;
+    /* Fixed height for the canvas */
     margin: 0 auto;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);  /* Drop shadow */
-    overflow: hidden;  /* Prevent canvas overflow */
-    border-radius: 10px;  /* Optional: Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    /* Drop shadow */
+    overflow: hidden;
+    /* Prevent canvas overflow */
+    border-radius: 10px;
+    /* Optional: Rounded corners */
 }
 
 /* Adjust the container to wrap the slider and arrows */
@@ -205,7 +359,8 @@ footer {
 
 .slide {
     min-width: 100%;
-    height: 400px;  /* Fixed height to match the slider */
+    height: 400px;
+    /* Fixed height to match the slider */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,95 +368,108 @@ footer {
 
 .slide img {
     width: 100%;
-    height: 100%;  /* Prevent resizing */
-    object-fit: cover;  /* Maintain aspect ratio */
+    height: 100%;
+    /* Prevent resizing */
+    object-fit: cover;
+    /* Maintain aspect ratio */
 }
 
 .slide video {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;  /* Maintain video aspect ratio */
+    object-fit: contain;
+    /* Maintain video aspect ratio */
 }
 
 /* Arrow Styles */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;  /* Set a fixed width */
-    height: 40px; /* Set a fixed height to match width */
+    width: 30px;
+    /* Set a fixed width */
+    height: 30px;
+    /* Set a fixed height to match width */
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 50%;  /* Make it a perfect circle */
+    border-radius: 50%;
+    /* Make it a perfect circle */
     user-select: none;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 10;  /* Ensure it stays above other elements */
-    display: flex;  /* Center arrow inside */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
+    z-index: 10;
+    /* Ensure it stays above other elements */
+    display: flex;
+    /* Center arrow inside */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
 }
 
 .prev {
-    left: -60px;  /* Adjust position to be outside container */
+    left: -60px;
+    /* Adjust position to be outside container */
 }
 
 .next {
-    right: -60px;  /* Adjust position to be outside container */
+    right: -60px;
+    /* Adjust position to be outside container */
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-/* Optional: Container spacing */
-.slider-wrapper {
-    margin: 20px 0;  /* Add space around the entire slider container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
-
-
 
 
 
 /* CSS */
 button {
-  align-items: center;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: .25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-  color: rgba(0, 0, 0, 0.85);
-  cursor: pointer;
-  display: inline-flex;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 1.25;
-  margin: 0;
-  min-height: 3rem;
-  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-  position: relative;
-  text-decoration: none;
-  transition: all 250ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  width: auto;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
 }
 
-button:hover,
 button:focus {
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  color: rgba(0, 0, 0, 0.65);
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
 }
 
 button:hover {
-  transform: translateY(-1px);
+    transform: translateY(-1px);
 }
+

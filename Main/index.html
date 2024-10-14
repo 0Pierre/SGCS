@@ -16,22 +16,22 @@
       <h1>South General Contracting Services INC</h1>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="javascript:void(0);" onclick="scrollToSection('home')">Home</a></li>
+          <li><a href="javascript:void(0);" onclick="scrollToSection('about')">About Us</a></li>
+          <li><a href="javascript:void(0);" onclick="scrollToSection('services')">Services</a></li>
+          <li><a href="javascript:void(0);" onclick="scrollToSection('gallery')">Gallery</a></li>
+          <li><a href="javascript:void(0);" onclick="scrollToSection('contact')">Contact Us</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="home" class="hero">
+  <section id="home">
     <div class="container">
       <h2>Your Trusted Drywall Contractor</h2>
       <p>We provide professional drywall installation, repair, and finishing services for residential and commercial
         projects.</p>
-      <button onclick="scrollToSection('contact')">Get a Quote</button>
+      <button class="button-1" onclick="scrollToSection('contact')">Get a Quote</button>
     </div>
   </section>
 
@@ -63,11 +63,20 @@
 
   <section id="gallery">
     <div class="container">
-      <h1 style="">Our Work</h1>
+      <h1>Our Work</h1>
       <div class="slider-wrapper">
         <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
         <div class="slider">
           <div class="slides">
+            <div class="slide">
+              <!-- Video container -->
+              <div class="video-container">
+                <video controls width="800" height="400">
+                  <source src="./assets/copy_18BFEEF8-6C03-48B0-A3B6-189FF872C440.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
             <!-- Add images or videos here -->
             <div class="slide">
               <img src="./img/IMG_0402.jpg" alt="Project 1">
@@ -90,12 +99,6 @@
             <div class="slide">
               <img src="./img/IMG_8962.jpg" alt="Project 7">
             </div>
-            <div class="slide">
-              <video controls width="800" height="400">
-                <source src="./assets/copy_18BFEEF8-6C03-48B0-A3B6-189FF872C440.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
           </div>
         </div>
         <span class="next" onclick="changeSlide(1)">&#10095;</span>
@@ -103,17 +106,19 @@
     </div>
   </section>
 
+
   <section id="contact">
     <div class="container">
-      <h2>Contact Us</h2>
-      <form id="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <button type="submit">Submit</button>
+      <form id="contact-form" class="contact-form">
+        <h2>CONTACT US</h2>
+        <p type="Name:" ><input placeholder="Write your name here.." id="name"></input></p>
+        <p type="Email:" ><input placeholder="Let us know how to contact you back.." id="email"></input></p>
+        <p type="Message:" ><input placeholder="What would you like to tell us.." id="message"></input></p>
+        <button>Send Message</button>
+        <div>
+          <span class="fa fa-phone"></span>001 1023 567
+          <span class="fa fa-envelope-o"></span> contact@company.com
+        </div>
       </form>
     </div>
   </section>
