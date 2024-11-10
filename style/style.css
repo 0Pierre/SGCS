@@ -15,7 +15,7 @@ body{
 html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--td-font-sans-serif);
 }
 
 /***************************************
@@ -40,6 +40,17 @@ header .container {
     align-items: center;
     justify-content: space-between;
 }
+
+/* Increase Spacing between Header Title and Navigation */
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-left: -300px;
+    color: rgb(245, 139, 0);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
 nav ul {
     display: flex;
     gap: 50px;
@@ -53,27 +64,33 @@ nav ul li a {
     color: white;
     text-decoration: none;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
-    transition: background 0.3s ease;
+    padding: 10px 5px;
+    transition: border-bottom 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    border-bottom: 2px solid transparent; /* Initial border set to transparent */
 }
 
-/* On hover, change background color */
+
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.226);
+    border-bottom: 3px solid rgb(245, 139, 0, 0.877); /* Adjust color and thickness as needed */
     border-radius: 10px;
-    /* Add rounded corners to links */
-}
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); /* Bottom shadow only */
+  }
 
-/* Increase Spacing between Header Title and Navigation */
-header h1 {
-    margin: 0;
-    font-size: 30px;
-    line-height: 1.2;
-    margin-left: -300px;
-    color: rgb(245, 139, 0);
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-    padding: 1%;
+nav ul li a.active {
+    border-bottom: 3px solid rgba(245, 139, 0, 0.877); /* Adjust color and thickness as needed */
+    border-radius: 10px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); /* Bottom shadow only */
+  }
+
+.divider {
+    height: 50px; /* Thickness of the divider */
+    background-color: rgb(245, 139, 0); /* Color of the divider */
+    margin: 5px;
+    width: 3px; /* Makes it full-width */
+    border-radius: 45%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); /* Apply shadow */
 }
+  
 
 /***************************************
 
@@ -535,4 +552,54 @@ ul i {
 }
 
 
-/* Demo purposes only */
+/***************************************
+
+.                FAQS  
+
+****************************************/
+
+.faq-container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: rgb(245, 139, 0);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: rgb(220, 110, 0);
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.faq-answer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.faq-question.active {
+    background-color: rgb(220, 110, 0); /* Active state */
+}
