@@ -103,7 +103,7 @@ nav ul li a.active {
     /* Limit the maximum width */
     margin: 0 auto;
     /* Center the container */
-    padding: 0 15px;
+    padding: 0 10px;
     /* Padding on the sides */
 }
 
@@ -113,11 +113,11 @@ nav ul li a.active {
 }
 
 #gallery h1{
-    font-size: 30px;
+    font-size: 60px;
     line-height: 1.2;
-    color: rgb(0, 0, 0);
-    text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.329);
-    padding: 5%;
+    color: rgb(245, 139, 0);
+    text-shadow: 0px 6px 6px rgb(0, 0, 0);
+    padding-bottom: 10%;
 }
 
 /***************************************
@@ -127,89 +127,11 @@ nav ul li a.active {
 ****************************************/
 
 section {
-    height: 100vh; /* Full page height */
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    text-align: center; /* Optional for centering text */
-}
-
-/***************************************
-
-.          GALLEY SLIDER SECTION  
-
-****************************************/
-
-.slider {
-    position: relative;
-    max-width: 800px;
-    height: 400px;
-    margin: 0 auto;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide video {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-/***************************************
-
-.             ARROW STYLING  
-
-****************************************/
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 13px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.next {
-    right: 0;
-    border-radius: 0 3px 3px 0;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
 }
 
 /***************************************
@@ -383,13 +305,13 @@ footer {
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    color: white;
+    color: rgb(245, 139, 0);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 50%;
     user-select: none;
-    background: rgba(0, 0, 0, 0.5);
+    background: #817f7f;
     z-index: 10;
     display: flex;
     justify-content: center;
